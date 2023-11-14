@@ -26,7 +26,5 @@ else:
     print(clean["Bâtiment"].unique().size)
     clean.to_excel('data_par_bat.xlsx', index = None, header=True)        
     clean =clean.query('bat_de_bureau == "oui"')
-    print(clean.head(5))
     clean = clean.reindex(columns=['Département','Commune', '0B - Numéro Chorus', 'Site', 'Bâtiment', '0B - Numéro Chorus.1', 'Code Postal', 'SDP', 'SUB','SUN', "SUN/SUB", 'pdt', 'SUN/pdt' ])
-    print(clean.head(5))
     clean.to_excel('ratio_par_bat.xlsx', index = None, header=True)
